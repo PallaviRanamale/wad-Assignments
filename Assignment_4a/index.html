@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Mobile Website</title>
+    
+    <!-- jQuery and jQuery Mobile CDN links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mobile/1.4.5/jquery.mobile.min.js"></script>
+    
+    <style>
+        .center-text {
+            text-align: center;
+        }
+        .logo {
+            max-width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+        .my-custom-button {
+            background-color: #4CAF50 !important;
+            color: white !important;
+            text-shadow: none !important;
+        }
+        .ui-page {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <!-- Home Page -->
+    <div data-role="page" id="home">
+        <div data-role="header" data-theme="b">
+            <h1>Mobile Shop</h1>
+            <a href="#panel" class="ui-btn ui-btn-left ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <!-- Panel -->
+        <div data-role="panel" id="panel" data-display="overlay" data-theme="b">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="info"><a href="#about">About Us</a></li>
+                <li data-icon="phone"><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="center-text">
+                <h2>Welcome to our Mobile Shop</h2>
+                <p>Discover our amazing products optimized for mobile experience!</p>
+            </div>
+
+            <ul data-role="listview" data-inset="true" data-divider-theme="b">
+                <li data-role="list-divider">Quick Links</li>
+                <li><a href="#products">View Products</a></li>
+                <li><a href="#featured">Featured Items</a></li>
+                <li><a href="#about">Learn About Us</a></li>
+            </ul>
+
+            <div data-role="collapsible-set">
+                <div data-role="collapsible" data-collapsed="false">
+                    <h3>Today's Deals</h3>
+                    <p>Check out our special offers for today with 20% discount on all electronics!</p>
+                </div>
+                <div data-role="collapsible">
+                    <h3>Upcoming Events</h3>
+                    <p>Join us for our annual tech showcase next week.</p>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+                    <li><a href="#products" data-icon="shop">Products</a></li>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#contact" data-icon="phone">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Page -->
+    <div data-role="page" id="products">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Products</h1>
+            <a href="#panel-products" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <!-- Panel for products page -->
+        <div data-role="panel" id="panel-products" data-display="overlay" data-theme="b">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="info"><a href="#about">About Us</a></li>
+                <li data-icon="phone"><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div data-role="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#all-products" data-ajax="false" class="ui-btn-active">All</a></li>
+                        <li><a href="#electronics" data-ajax="false">Electronics</a></li>
+                        <li><a href="#clothing" data-ajax="false">Clothing</a></li>
+                    </ul>
+                </div>
+                <div id="all-products">
+                    <ul data-role="listview" data-filter="true" data-filter-placeholder="Search products...">
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Smartphone X</h2>
+                                <p>Latest model with advanced features</p>
+                                <p class="ui-li-aside"><strong>$699</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Wireless Earbuds</h2>
+                                <p>Premium sound quality with noise cancellation</p>
+                                <p class="ui-li-aside"><strong>$129</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Designer T-Shirt</h2>
+                                <p>100% cotton, available in multiple colors</p>
+                                <p class="ui-li-aside"><strong>$49</strong></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="electronics">
+                    <ul data-role="listview">
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Smartphone X</h2>
+                                <p>Latest model with advanced features</p>
+                                <p class="ui-li-aside"><strong>$699</strong></p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Wireless Earbuds</h2>
+                                <p>Premium sound quality with noise cancellation</p>
+                                <p class="ui-li-aside"><strong>$129</strong></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="clothing">
+                    <ul data-role="listview">
+                        <li>
+                            <a href="#product-detail">
+                                <h2>Designer T-Shirt</h2>
+                                <p>100% cotton, available in multiple colors</p>
+                                <p class="ui-li-aside"><strong>$49</strong></p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#products" data-icon="shop" class="ui-btn-active">Products</a></li>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#contact" data-icon="phone">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div data-role="page" id="about">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>About Us</h1>
+            <a href="#panel-about" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <!-- Panel for about page -->
+        <div data-role="panel" id="panel-about" data-display="overlay" data-theme="b">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="info"><a href="#about">About Us</a></li>
+                <li data-icon="phone"><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>Our Story</h2>
+            <p>Founded in 2010, our mobile shop has been providing quality products and excellent customer service for over a decade.</p>
+            
+            <h3>Our Mission</h3>
+            <p>To provide high-quality mobile products at affordable prices with exceptional customer service.</p>
+            
+            <div data-role="collapsible">
+                <h3>Our Team</h3>
+                <ul data-role="listview">
+                    <li>
+                        <h2>John Smith</h2>
+                        <p>CEO & Founder</p>
+                    </li>
+                    <li>
+                        <h2>Jane Doe</h2>
+                        <p>Head of Customer Service</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#products" data-icon="shop">Products</a></li>
+                    <li><a href="#about" data-icon="info" class="ui-btn-active">About</a></li>
+                    <li><a href="#contact" data-icon="phone">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div data-role="page" id="contact">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Contact Us</h1>
+            <a href="#panel-contact" class="ui-btn ui-btn-right ui-icon-bars ui-btn-icon-notext">Menu</a>
+        </div>
+
+        <!-- Panel for contact page -->
+        <div data-role="panel" id="panel-contact" data-display="overlay" data-theme="b">
+            <ul data-role="listview">
+                <li data-icon="home"><a href="#home">Home</a></li>
+                <li data-icon="shop"><a href="#products">Products</a></li>
+                <li data-icon="info"><a href="#about">About Us</a></li>
+                <li data-icon="phone"><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close</a>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you! Fill out the form below or use our contact information.</p>
+            
+            <form>
+                <div data-role="fieldcontain">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="subject">Subject:</label>
+                    <select name="subject" id="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="sales">Sales Question</option>
+                        <option value="feedback">Feedback</option>
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="ui-btn ui-btn-b ui-corner-all my-custom-button">Send Message</button>
+            </form>
+            
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Contact Information</h3>
+                <p><strong>Address:</strong> 123 Mobile Street, Tech City, TC 12345</p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+                <p><strong>Email:</strong> info@mobileshop.example</p>
+                <p><strong>Hours:</strong> Monday - Friday, 9am - 6pm</p>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#home" data-icon="home">Home</a></li>
+                    <li><a href="#products" data-icon="shop">Products</a></li>
+                    <li><a href="#about" data-icon="info">About</a></li>
+                    <li><a href="#contact" data-icon="phone" class="ui-btn-active">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Page -->
+    <div data-role="page" id="product-detail">
+        <div data-role="header" data-theme="b">
+            <a href="#" data-icon="back" data-rel="back">Back</a>
+            <h1>Product Details</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+            <div class="center-text">
+                <h2>Smartphone X</h2>
+                <p class="ui-bar ui-bar-a">$699</p>
+            </div>
+            
+            <div data-role="tabs">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#description" data-ajax="false" class="ui-btn-active">Description</a></li>
+                        <li><a href="#specs" data-ajax="false">Specifications</a></li>
+                        <li><a href="#reviews" data-ajax="false">Reviews</a></li>
+                    </ul>
+                </div>
+                <div id="description">
+                    <p>The Smartphone X is our latest flagship device featuring cutting-edge technology. With its sleek design and powerful performance, it's perfect for both work and entertainment.</p>
+                    <p>Key features include a stunning 6.5" OLED display, 128GB storage, and a high-capacity battery that lasts all day.</p>
+                </div>
+                <div id="specs">
+                    <ul data-role="listview" data-inset="true">
+                        <li><strong>Display:</strong> 6.5" OLED</li>
+                        <li><strong>Processor:</strong> Octa-core 2.4GHz</li>
+                        <li><strong>RAM:</strong> 8GB</li>
+                        <li><strong>Storage:</strong> 128GB</li>
+                        <li><strong>Camera:</strong> 48MP + 12MP + 8MP</li>
+                        <li><strong>Battery:</strong> 4500mAh</li>
+                    </ul>
+                </div>
+                <div id="reviews">
+                    <ul data-role="listview" data-inset="true">
+                        <li>
+                            <h3>Amazing phone!</h3>
+                            <p>★★★★★</p>
+                            <p>The best smartphone I've ever owned. Great camera and battery life.</p>
+                            <p class="ui-li-aside"><strong>- John D.</strong></p>
+                        </li>
+                        <li>
+                            <h3>Good but expensive</h3>
+                            <p>★★★★☆</p>
+                            <p>Excellent features but a bit pricey compared to similar models.</p>
+                            <p class="ui-li-aside"><strong>- Sarah M.</strong></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#" class="ui-btn ui-btn-b ui-corner-all ui-icon-heart ui-btn-icon-left">Add to Wishlist</a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#" class="ui-btn ui-corner-all ui-icon-shop ui-btn-icon-left my-custom-button">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Copyright © 2025 Mobile Shop</h4>
+        </div>
+    </div>
+
+    <!-- Featured Items Page -->
+    <div data-role="page" id="featured">
+        <div data-role="header" data-theme="b">
+            <a href="#home" data-icon="back" data-rel="back">Back</a>
+            <h1>Featured Items</h1>
+        </div>
+
+        <div role="main" class="ui-content">
+            <h2>This Week's Featured Products</h2>
+            
+            <div data-role="controlgroup" data-type="horizontal" class="ui-mini center-text">
+                <a href="#" class="ui-btn ui-corner-all ui-btn-active">All</a>
+                <a href="#" class="ui-btn ui-corner-all">New Arrivals</a>
+                <a href="#" class="ui-btn ui-corner-all">Best Sellers</a>
+            </div>
+            
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <div class="ui-body ui-body-a ui-corner-all">
+                        <h3>Smart Watch Pro</h3>
+                        <p>$199</p>
+                        <p><strong>20% OFF</strong></p>
+                        <a href="#product-detail" class="ui-btn ui-btn-inline ui-mini ui-corner-all">View Details</a>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-a ui-corner-all">
+                        <h3>Wireless Charging Pad</h3>
+                        <p>$49</p>
+                        <p><strong>15% OFF</strong></p>
+                        <a href="#product-detail" class="ui-btn ui-btn-inline ui-mini ui-corner-all">View Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ui-grid-solo">
+                <div class="ui-block-a">
+                    <div class="ui-body ui-body-b ui-corner-all center-text">
+                        <h3>Deal of the Day</h3>
+                        <h2>Premium Headphones</h2>
+                        <p><strong>$129</strong> <span style="text-decoration: line-through;">$199</span></p>
+                        <p>Save $70 today only!</p>
+                        <a href="#product-detail" class="ui-btn ui-btn-inline ui-corner-all my-custom-button">View Deal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Limited Time Offers</h4>
+        </div>
+    </div>
+</body>
+</html>
