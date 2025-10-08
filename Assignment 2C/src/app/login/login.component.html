@@ -1,0 +1,9 @@
+<h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <input type="email" formControlName="email" placeholder="Enter Email"><br><br>
+  <input type="password" formControlName="password" placeholder="Enter Password"><br><br>
+  <button type="submit">Login</button>
+</form>
+
+<!-- Add a register link -->
+<p>Don't have an account? <button (click)="navigateToRegister()">Register</button></p>

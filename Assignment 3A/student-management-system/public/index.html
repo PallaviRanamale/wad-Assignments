@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Student Management System</h1>
+
+  <!-- Form to add a new student -->
+  <form action="/add-student" method="POST" id="addStudentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="studentClass">Class:</label>
+    <input type="text" id="studentClass" name="studentClass" required>
+
+    <label for="rollNumber">Roll Number:</label>
+    <input type="text" id="rollNumber" name="rollNumber" required>
+
+    <button type="submit">Add Student</button>
+  </form>
+
+  <!-- Section to display all students -->
+  <h2>All Students</h2>
+  <div id="studentList"></div>
+
+  <!-- Form to search for a student by roll number -->
+  <h2>Search Student by Roll Number</h2>
+  <form id="searchForm">
+    <input type="text" id="searchInput" placeholder="Enter roll number" required>
+    <button type="submit">Search</button>
+  </form>
+  <!-- Container to display search results -->
+  <div id="searchResults"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

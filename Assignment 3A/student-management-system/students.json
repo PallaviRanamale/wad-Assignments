@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Pallavi",
+    "age": "21",
+    "studentClass": "TE11",
+    "rollNumber": "33364"
+  },
+  {
+    "name": "Sejal",
+    "age": "20",
+    "studentClass": "TE11",
+    "rollNumber": "33356"
+  },
+  {
+    "name": "XYZ",
+    "age": "20",
+    "studentClass": "TE10",
+    "rollNumber": "33360"
+  },
+  {
+    "name": "abc",
+    "age": "15",
+    "studentClass": "9",
+    "rollNumber": "12"
+  },
+  {
+    "name": "mnl",
+    "age": "18",
+    "studentClass": "12",
+    "rollNumber": "64"
+  },
+  {
+    "name": "Rutika",
+    "age": "20",
+    "studentClass": "TE11",
+    "rollNumber": "33355"
+  },
+  {
+    "name": "uhsf",
+    "age": "20",
+    "studentClass": "TE11",
+    "rollNumber": "33390"
+  },
+  {
+    "name": "kgf",
+    "age": "21",
+    "studentClass": "TE11",
+    "rollNumber": "33391"
+  }
+]
